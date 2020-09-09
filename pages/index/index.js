@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    condition: Math.floor(Math.random()*3+1),
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
