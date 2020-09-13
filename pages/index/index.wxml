@@ -1,23 +1,34 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-  <view>今天吃什么？</view>
-  <view wx:if = "{{condition === 1}}">
-      饺子
-  </view>
-  <view wx:elif = "{{condition === 2}}">
-      米饭
-  </view>
-  <view wx:else>
-      面食
-  </view>
+	<view class="userinfo">
+		<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+		<block wx:else>
+			<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+			<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+		</block>
+	</view>
+	<view class="usermotto">
+		<text class="user-motto">{{motto}}</text>
+	</view>
+
+	<view>今天吃什么？</view>
+	<view wx:if="{{condition === 1}}">
+		饺子
+	</view>
+	<view wx:elif="{{condition === 2}}">
+		米饭
+	</view>
+	<view wx:else>
+		面食
+	</view>
+  <text>\n</text>
+  <template name="tempItem">
+    <view>
+      <view>联系人：{{name}}</view>
+      <view>联系方式：{{phone}}</view>
+      <view>地址：{{address}}</view>
+    </view>
+  </template>
+  <template is="tempItem" data="{{...item}}"></template>
+
 </view>

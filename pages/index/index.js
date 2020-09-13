@@ -8,7 +8,12 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    item: {
+      name:"张三",
+      phone:"1323123123",
+      address:"成都"
+    }
   },
   //事件处理函数
   bindViewTap: function() {
