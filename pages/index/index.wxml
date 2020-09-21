@@ -11,7 +11,13 @@
 		<text class="user-motto">{{motto}}</text>
 	</view>
 
-	<view>今天吃什么？</view>
+	<view class="open-editor">
+		<button type="primary" bindtap="jumpPage">打开编辑器</button>
+	</view>
+<!-- <view class="container">
+  sdfsdfds
+</view> -->
+	<!-- <view>今天吃什么？</view>
 	<view wx:if="{{condition === 1}}">
 		饺子
 	</view>
@@ -21,14 +27,16 @@
 	<view wx:else>
 		面食
 	</view>
-  <text>\n</text>
-  <template name="tempItem">
+  <text>\n</text> -->
+  <!-- <template name="tempItem">
     <view>
       <view>联系人：{{name}}</view>
       <view>联系方式：{{phone}}</view>
       <view>地址：{{address}}</view>
     </view>
-  </template>
-  <template is="tempItem" data="{{...item}}"></template>
+	</template> -->
+	<!-- <template is="tempItem" data="{{...item}}"></template> -->
+	
+
 
 </view>

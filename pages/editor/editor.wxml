@@ -1,0 +1,5 @@
+<!--pages/editor/editor.wxml-->
+<text>pages/editor/editor.wxml</text>
+<view class="editor">
+  <editor placeholder="快来写东西吧"></editor>
+</view>
